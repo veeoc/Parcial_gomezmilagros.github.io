@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Preferencias audiovisuales de Vae — música y video que inspiran su práctica de diseño." />
+  <meta name="author" content="Vae" />
+  <title>Vae · Audiovisual</title>
+
+  <!-- Google Fonts: Playfair Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!--
+    =====================================================
+    LICENCIA DE DERECHOS DE AUTOR
+    Esta obra está licenciada bajo Creative Commons
+    Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+    https://creativecommons.org/licenses/by-nc-nd/4.0/
+    =====================================================
+  -->
+
+  <style>
+    :root {
+      --color-fondo: #f5f5f3;
+      --color-texto: #2b2b2b;
+      --color-acento: #7b6fc4;
+      --color-acento-claro: #a99fd8;
+      --color-gris-medio: #888;
+      --color-gris-claro: #d8d8d8;
+      --color-blanco: #fff;
+      --fuente-display: 'Playfair Display', Georgia, serif;
+      --fuente-cuerpo: 'DM Sans', Helvetica, sans-serif;
+      --max-ancho: 960px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--color-fondo);
+      color: var(--color-texto);
+      font-family: var(--fuente-cuerpo);
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      border-bottom: 1px solid var(--color-gris-claro);
+      padding: 1.5rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--color-blanco);
+    }
+
+    .logo-header {
+      font-family: var(--fuente-cuerpo);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-texto);
+    }
+
+    nav { display: flex; gap: 2rem; }
+
+    a {
+      color: var(--color-acento);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    a:hover { color: var(--color-texto); text-decoration: underline; text-underline-offset: 3px; }
+
+    a.nav-link {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-gris-medio);
+      font-weight: 400;
+    }
+    a.nav-link:hover { color: var(--color-acento); text-decoration: none; }
+    a.nav-link.activo { color: var(--color-texto); font-weight: 500; }
+
+    main {
+      max-width: var(--max-ancho);
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      font-family: var(--fuente-display);
+      font-size: clamp(3.5rem, 10vw, 7rem);
+      font-weight: 700;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      color: var(--color-texto);
+    }
+    h1 em { font-style: italic; color: var(--color-acento); }
+    h1 .anio {
+      font-family: var(--fuente-cuerpo);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-gris-medio);
+      display: block;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: var(--fuente-cuerpo);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-gris-medio);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--color-gris-claro);
+    }
+
+    p {
+      font-family: var(--fuente-cuerpo);
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--color-texto);
+      max-width: 60ch;
+      margin-bottom: 1.5rem;
+    }
+    p.intro { font-size: 1rem; font-weight: 300; color: #444; max-width: 65ch; }
+    p.meta { font-size: 0.75rem; color: var(--color-gris-medio); margin-bottom: 0.25rem; max-width: none; }
+
+    .hero {
+      padding: 3rem 0 5rem;
+      border-bottom: 1px solid var(--color-gris-claro);
+      margin-bottom: 3rem;
+    }
+    .hero-subtitulo {
+      font-family: var(--fuente-display);
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--color-gris-medio);
+      margin-top: 0.75rem;
+    }
+
+    .bloque-media {
+      margin-bottom: 5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--color-gris-claro);
+    }
+    .bloque-media:last-of-type { border-bottom: none; }
+
+    .embed-contenedor {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      background: #000;
+      margin: 1.5rem 0;
+    }
+    .embed-contenedor iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
+    .licencia {
+      margin-top: 5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-gris-claro);
+      font-size: 0.75rem;
+      color: var(--color-gris-medio);
+      line-height: 1.6;
+    }
+    .licencia p { max-width: none; font-size: 0.75rem; color: var(--color-gris-medio); }
+    .licencia a { color: var(--color-gris-medio); font-weight: 400; text-decoration: underline; }
+
+    footer {
+      background: var(--color-texto);
+      color: var(--color-fondo);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      margin-top: 5rem;
+    }
+    footer a { color: var(--color-acento-claro); font-weight: 400; }
+
+    @media (max-width: 700px) {
+      header { flex-direction: column; gap: 1rem; padding: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <span class="logo-header">Vae · Diseño Gráfico</span>
+    <nav aria-label="Navegación principal">
+      <a href="index.html" class="nav-link">Perfil</a>
+      <a href="media.html" class="nav-link activo">Audiovisual</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="titulo-media">
+      <h1 id="titulo-media">
+        <span class="anio">Escuchar · Ver</span>
+        audio<em>vi</em>sual
+      </h1>
+      <p class="hero-subtitulo">Lo que suena y se ve <em>mientras diseño</em></p>
+    </section>
+
+    <p class="intro">
+      La música y el video son parte de mi proceso creativo. Estas son algunas obras
+      audiovisuales que me acompañan, inspiran mi paleta visual y me conectan con el
+      ritmo del trabajo de diseño.
+    </p>
+
+    <!-- VIDEO 1 -->
+    <section class="bloque-media" aria-labelledby="titulo-video1">
+      <h2 id="titulo-video1">Video — diseño en movimiento</h2>
+      <p>
+        <strong>Bauhaus: Art as Life</strong> — documental sobre la escuela que definió
+        el diseño moderno. Una mirada a cómo la forma, la función y el arte pueden convivir.
+        Esencial para entender los fundamentos del diseño gráfico contemporáneo.
+      </p>
+      <div class="embed-contenedor" role="region" aria-label="Video embebido de YouTube">
+        <!--
+          Video: "Bauhaus: Art as Life" — trailer
+          Canal: Barbican Centre — https://www.youtube.com/@barbican
+          Embebido bajo Términos de Servicio de YouTube.
+          Todos los derechos reservados al titular.
+        -->
+        <iframe
+          src="https://www.youtube.com/embed/V3vhNAqNnFU"
+          title="Bauhaus: Art as Life — Barbican Centre (documental)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <p class="meta">
+        «Bauhaus: Art as Life» · Canal:
+        <a href="https://www.youtube.com/@barbican" target="_blank" rel="noopener">Barbican Centre</a>
+        en YouTube · Todos los derechos reservados al titular.
+      </p>
+    </section>
+
+    <!-- VIDEO 2 -->
+    <section class="bloque-media" aria-labelledby="titulo-video2">
+      <h2 id="titulo-video2">Música — lo que suena en el estudio</h2>
+      <p>
+        <strong>Nathy Peluso — «Bueno»</strong> — la energía visual y sonora de Nathy Peluso
+        es una referencia constante. Su estética mezcla lo retro con lo contemporáneo.
+        Su trabajo audiovisual es diseño en sí mismo.
+      </p>
+      <div class="embed-contenedor" role="region" aria-label="Video musical embebido de YouTube">
+        <!--
+          Video: Nathy Peluso — "Bueno" (Video Oficial)
+          Canal oficial: https://www.youtube.com/@NathyPeluso
+          © Sony Music / Nathy Peluso. Todos los derechos reservados.
+          Embebido bajo Términos de Servicio de YouTube.
+        -->
+        <iframe
+          src="https://www.youtube.com/embed/UEHJFcMGRco"
+          title="Nathy Peluso — Bueno (Video Oficial)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <p class="meta">
+        Nathy Peluso — «Bueno» · Video oficial ·
+        <a href="https://www.youtube.com/@NathyPeluso" target="_blank" rel="noopener">Canal oficial en YouTube</a>
+        · © Sony Music / Nathy Peluso. Todos los derechos reservados.
+      </p>
+    </section>
+
+    <!-- AUDIO -->
+    <section class="bloque-media" aria-labelledby="titulo-audio">
+      <h2 id="titulo-audio">Audio — playlist de estudio</h2>
+      <p>
+        Este mix lo-fi es el que más me acompaña en sesiones largas de trabajo.
+        El ritmo sostenido sin letra permite concentrarse en la composición visual.
+      </p>
+      <div class="embed-contenedor" role="region" aria-label="Mix de audio embebido">
+        <!--
+          Audio: Lo-Fi Hip Hop Radio
+          Canal: Lofi Girl — https://www.youtube.com/@LofiGirl
+          Los derechos de audio pertenecen a los artistas respectivos.
+          Embebido bajo Términos de Servicio de YouTube.
+        -->
+        <iframe
+          src="https://www.youtube.com/embed/jfKfPfyJRdk"
+          title="Lo-Fi Hip Hop Radio — Lofi Girl (música para estudiar/trabajar)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <p class="meta">
+        «Lofi Hip Hop Radio» · Canal:
+        <a href="https://www.youtube.com/@LofiGirl" target="_blank" rel="noopener">Lofi Girl</a>
+        en YouTube · Derechos de audio de los artistas respectivos.
+      </p>
+    </section>
+
+    <!-- LICENCIA -->
+    <div class="licencia" role="contentinfo" aria-label="Información de licencia">
+      <a href="https://veeoc.github.io/Parcial_gomezmilagros.github.io/">Portfolio</a> © 2026 by
+      <a href="https://www.instagram.com/tunombredeusuario">Gomez Milagros</a> is licensed under
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a>
+      <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Vae · Diseño Gráfico Córdoba · 2026 ·
+      <a href="index.html">← Volver al perfil</a>
+    </p>
+  </footer>
+
+</body>
+</html>
