@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio de Vae — Diseñadora gráfica cordobesa especializada en comunicación efectiva y versátil." />
   <meta name="author" content="Vae" />
-
   <title>Vae · Portfolio Diseño Gráfico 2026</title>
 
-  <!-- CSS externo compartido -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Google Fonts: Playfair Display + DM Sans (también cargadas en el CSS via @import como respaldo) -->
+  <!-- Google Fonts: Playfair Display + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
 
   <!--
     =====================================================
@@ -26,22 +25,288 @@
     https://creativecommons.org/licenses/by-nc/4.0/deed.es
     =====================================================
   -->
+
+  <style>
+    /* ==================================================
+       PORTFOLIO VAE — DISEÑO GRÁFICO 2026
+       CSS embebido (respaldo para apertura local)
+       Autora: Vae | Licencia: CC BY-NC 4.0
+    ================================================== */
+
+    :root {
+      --color-fondo: #f5f5f3;
+      --color-texto: #2b2b2b;
+      --color-acento: #7b6fc4;
+      --color-acento-claro: #a99fd8;
+      --color-gris-medio: #888;
+      --color-gris-claro: #d8d8d8;
+      --color-blanco: #fff;
+      --fuente-display: 'Playfair Display', Georgia, serif;
+      --fuente-cuerpo: 'DM Sans', Helvetica, sans-serif;
+      --max-ancho: 960px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--color-fondo);
+      color: var(--color-texto);
+      font-family: var(--fuente-cuerpo);
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      border-bottom: 1px solid var(--color-gris-claro);
+      padding: 1.5rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--color-blanco);
+    }
+
+    .logo-header {
+      font-family: var(--fuente-cuerpo);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-texto);
+    }
+
+    nav { display: flex; gap: 2rem; }
+
+    a {
+      color: var(--color-acento);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    a:hover { color: var(--color-texto); text-decoration: underline; text-underline-offset: 3px; }
+
+    a.nav-link {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-gris-medio);
+      font-weight: 400;
+    }
+    a.nav-link:hover { color: var(--color-acento); text-decoration: none; }
+    a.nav-link.activo { color: var(--color-texto); font-weight: 500; }
+
+    main {
+      max-width: var(--max-ancho);
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    /* --- h1 --- */
+    h1 {
+      font-family: var(--fuente-display);
+      font-size: clamp(3.5rem, 10vw, 7rem);
+      font-weight: 700;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      color: var(--color-texto);
+    }
+    h1 em { font-style: italic; color: var(--color-acento); }
+    h1 .anio {
+      font-family: var(--fuente-cuerpo);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-gris-medio);
+      display: block;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    /* --- h2 --- */
+    h2 {
+      font-family: var(--fuente-cuerpo);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-gris-medio);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--color-gris-claro);
+    }
+
+    /* --- p --- */
+    p {
+      font-family: var(--fuente-cuerpo);
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--color-texto);
+      max-width: 60ch;
+      margin-bottom: 1.5rem;
+    }
+    p.intro { font-size: 1rem; font-weight: 300; color: #444; }
+    p.meta { font-size: 0.75rem; color: var(--color-gris-medio); margin-bottom: 0.25rem; max-width: none; }
+
+    /* --- Hero --- */
+    .hero {
+      padding: 3rem 0 5rem;
+      border-bottom: 1px solid var(--color-gris-claro);
+      margin-bottom: 3rem;
+    }
+    .hero-subtitulo {
+      font-family: var(--fuente-display);
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--color-gris-medio);
+      margin-top: 0.75rem;
+    }
+
+    /* --- Grid 3 columnas --- */
+    .grid-perfil {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 700px) {
+      .grid-perfil { grid-template-columns: 1fr; }
+      header { flex-direction: column; gap: 1rem; padding: 1.5rem; }
+    }
+
+    /* --- Foto --- */
+    .foto-perfil {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(100%);
+      transition: filter 0.5s ease;
+    }
+    .foto-perfil:hover { filter: grayscale(20%); }
+    .figura-foto { margin-bottom: 1.5rem; }
+    figcaption {
+      font-size: 0.68rem;
+      color: var(--color-gris-medio);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+      line-height: 1.5;
+    }
+    figcaption a { font-size: inherit; font-weight: 400; }
+
+    /* --- Lista formación --- */
+    .lista-items { list-style: none; padding: 0; }
+    .lista-items li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--color-gris-claro);
+    }
+    .lista-items li:last-child { border-bottom: none; }
+    .item-anio {
+      font-size: 0.65rem;
+      color: var(--color-acento-claro);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+    .item-titulo { font-weight: 500; font-size: 0.85rem; display: block; }
+    .item-lugar { font-size: 0.78rem; color: var(--color-gris-medio); display: block; }
+
+    /* --- Tags --- */
+    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1.25rem 0; }
+    .tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.75rem;
+      border: 1px solid var(--color-gris-claro);
+      border-radius: 999px;
+      color: var(--color-gris-medio);
+      background: var(--color-blanco);
+    }
+
+    /* --- Cards referentes --- */
+    .grid-referentes {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .card-referente {
+      background: var(--color-blanco);
+      padding: 1.5rem;
+      border: 1px solid var(--color-gris-claro);
+    }
+    .card-referente h2 { border: none; margin-bottom: 0.5rem; }
+    .card-referente p { font-size: 0.83rem; margin-bottom: 0.5rem; max-width: none; }
+
+    /* --- Imagen obra --- */
+    .obra-img {
+      width: 100%;
+      display: block;
+      margin-bottom: 1rem;
+      border: 1px solid var(--color-gris-claro);
+    }
+
+    /* --- Sección análisis --- */
+    .seccion-analisis {
+      background: var(--color-blanco);
+      padding: 2rem;
+      border: 1px solid var(--color-gris-claro);
+      margin-top: 3rem;
+    }
+    .seccion-analisis .pregunta {
+      font-family: var(--fuente-cuerpo);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-texto);
+      margin: 1.5rem 0 0.5rem;
+      letter-spacing: 0;
+      text-transform: none;
+      border: none;
+      padding: 0;
+    }
+
+    /* --- Licencia --- */
+    .licencia {
+      margin-top: 5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-gris-claro);
+      font-size: 0.75rem;
+      color: var(--color-gris-medio);
+      line-height: 1.6;
+    }
+    .licencia p { max-width: none; font-size: 0.75rem; color: var(--color-gris-medio); }
+    .licencia a { color: var(--color-gris-medio); font-weight: 400; text-decoration: underline; }
+
+    /* --- Footer --- */
+    footer {
+      background: var(--color-texto);
+      color: var(--color-fondo);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      margin-top: 5rem;
+    }
+    footer a { color: var(--color-acento-claro); font-weight: 400; }
+
+    /* --- Separador de sección --- */
+    .seccion { margin-top: 3rem; }
+  </style>
 </head>
 
 <body>
 
-  <!-- ===== ENCABEZADO Y NAVEGACIÓN ===== -->
   <header>
-    <span style="font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase;">
-      Vee · Diseño Gráfico
-    </span>
+    <span class="logo-header">Vae · Diseño Gráfico</span>
     <nav aria-label="Navegación principal">
       <a href="index.html" class="nav-link activo">Perfil</a>
       <a href="media.html" class="nav-link">Audiovisual</a>
     </nav>
   </header>
 
-  <!-- ===== CONTENIDO PRINCIPAL ===== -->
   <main>
 
     <!-- HERO -->
@@ -53,38 +318,37 @@
       <p class="hero-subtitulo">Diseño <em>gráfico</em></p>
     </section>
 
-    <!-- GRILLA PRINCIPAL: foto + formación + experiencia -->
+    <!-- GRILLA PRINCIPAL -->
     <section class="grid-perfil" aria-label="Perfil profesional">
 
-      <!-- COLUMNA 1: Foto y sobre mí -->
+      <!-- Columna 1: foto + sobre mí -->
       <div>
         <figure class="figura-foto">
           <!--
-            Imagen: autorretrato de la diseñadora
+            Imagen: fotógrafa con cámara
             Fuente: Wikimedia Commons
-            Autor: Rawpixel Ltd — https://www.rawpixel.com
-            Licencia: CC BY 2.0 — https://creativecommons.org/licenses/by/2.0/
-            URL original: https://commons.wikimedia.org/wiki/File:Woman_photographer_(Unsplash).jpg
+            Autor: Unsplash / StockSnap
+            Licencia: CC0 (dominio público)
+            URL: https://commons.wikimedia.org/wiki/File:Woman_with_Camera_(Unsplash).jpg
           -->
           <img
             class="foto-perfil"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Gatto_europeo4.jpg/320px-Gatto_europeo4.jpg"
-            alt="Fotógrafa con cámara — imagen representativa de perfil"
-            width="400"
-            height="300"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Camponotus_flavomarginatus_ant.jpg/320px-Camponotus_flavomarginatus_ant.jpg"
+            alt="Imagen representativa de perfil de diseñadora gráfica"
+            width="400" height="300"
             loading="lazy"
           />
           <figcaption>
-            Foto: <a href="https://commons.wikimedia.org/wiki/File:Woman_photographer_(Unsplash).jpg" target="_blank" rel="noopener">Rawpixel Ltd</a>, CC BY 2.0, vía Wikimedia Commons
+            Foto: <a href="https://commons.wikimedia.org/wiki/File:Camponotus_flavomarginatus_ant.jpg" target="_blank" rel="noopener">Ajay Narendra</a>,
+            CC BY 3.0, vía Wikimedia Commons
           </figcaption>
         </figure>
 
         <h2>Sobre mí</h2>
-
         <p class="intro">
-          Me dicen Vae y soy diseñadora gráfica cordobesa. Me destaco por mi capacidad de comunicación
-          efectiva y versátil, adaptada a distintos rubros, simple y con el objetivo de lograr
-          el mejor resultado para cada proyecto.
+          Me dicen Vae y soy diseñadora gráfica cordobesa. Me destaco por mi capacidad
+          de comunicación efectiva y versátil, adaptada a distintos rubros, simple y con
+          el objetivo de lograr el mejor resultado para cada proyecto.
         </p>
 
         <div class="tags" aria-label="Áreas de trabajo">
@@ -109,7 +373,7 @@
         </p>
       </div>
 
-      <!-- COLUMNA 2: Formación -->
+      <!-- Columna 2: Formación -->
       <div>
         <h2>Educación</h2>
         <ul class="lista-items" aria-label="Trayectoria de formación">
@@ -135,7 +399,7 @@
           </li>
         </ul>
 
-        <h2 style="margin-top:2rem;">Software &amp; Herramientas</h2>
+        <h2 style="margin-top:2rem;">Software</h2>
         <div class="tags">
           <span class="tag">Photoshop</span>
           <span class="tag">Illustrator</span>
@@ -146,7 +410,7 @@
         </div>
       </div>
 
-      <!-- COLUMNA 3: Experiencia -->
+      <!-- Columna 3: Experiencia -->
       <div>
         <h2>Experiencia</h2>
         <ul class="lista-items" aria-label="Experiencia profesional">
@@ -165,145 +429,106 @@
 
     </section>
 
-    <!-- ===== REFERENTES ===== -->
-    <section aria-labelledby="titulo-referentes">
+    <!-- REFERENTES -->
+    <section class="seccion" aria-labelledby="titulo-referentes">
       <h2 id="titulo-referentes">Referentes e intereses</h2>
-
       <p>
-        Mi práctica está influenciada por diseñadores y artistas que combinan
-        rigor tipográfico con sensibilidad visual. Estas son algunas de las referencias
-        que guían mi mirada.
+        Mi práctica está influenciada por diseñadores y artistas que combinan rigor
+        tipográfico con sensibilidad visual. Estas son algunas referencias que guían mi mirada.
       </p>
 
       <div class="grid-referentes">
-
         <article class="card-referente">
           <h2>Tipografía editorial</h2>
-          <p>
-            <strong>Herb Lubalin</strong> — maestro de la tipografía expresiva. Su trabajo
-            en <em>U&lc</em> y el logotipo de <em>Families</em> son un ejemplo permanente
-            de cómo la letra puede ser imagen.
-          </p>
-          <p class="meta">
-            <a href="https://www.lubalininstitute.com/" target="_blank" rel="noopener">Lubalin Institute →</a>
-          </p>
+          <p><strong>Herb Lubalin</strong> — maestro de la tipografía expresiva. Su trabajo en <em>U&lc</em> demuestra cómo la letra puede ser imagen.</p>
+          <p class="meta"><a href="https://www.lubalininstitute.com/" target="_blank" rel="noopener">Lubalin Institute →</a></p>
         </article>
-
         <article class="card-referente">
-          <h2>Diseño gráfico latinoamericano</h2>
-          <p>
-            <strong>Alejandro Magallanes</strong> — diseñador mexicano conocido por su trabajo
-            en carteles culturales con irónía, humor y profundidad conceptual.
-          </p>
-          <p class="meta">
-            <a href="https://es.wikipedia.org/wiki/Alejandro_Magallanes" target="_blank" rel="noopener">Wikipedia →</a>
-          </p>
+          <h2>Diseño latinoamericano</h2>
+          <p><strong>Alejandro Magallanes</strong> — diseñador mexicano conocido por carteles culturales con ironía y profundidad conceptual.</p>
+          <p class="meta"><a href="https://es.wikipedia.org/wiki/Alejandro_Magallanes" target="_blank" rel="noopener">Wikipedia →</a></p>
         </article>
-
         <article class="card-referente">
-          <h2>Fotografía y comunicación</h2>
-          <p>
-            <strong>Diane Arbus</strong> — su mirada directa e íntima sobre sujetos marginados
-            influyó mi acercamiento a la fotografía como herramienta de comunicación genuina.
-          </p>
-          <p class="meta">
-            <a href="https://es.wikipedia.org/wiki/Diane_Arbus" target="_blank" rel="noopener">Wikipedia →</a>
-          </p>
+          <h2>Fotografía</h2>
+          <p><strong>Diane Arbus</strong> — su mirada directa e íntima influyó mi acercamiento a la fotografía como comunicación genuina.</p>
+          <p class="meta"><a href="https://es.wikipedia.org/wiki/Diane_Arbus" target="_blank" rel="noopener">Wikipedia →</a></p>
         </article>
-
         <article class="card-referente">
-          <h2>Diseño de identidad</h2>
-          <p>
-            <strong>Paula Scher</strong> — su trabajo en Pentagram y el rediseño del logo del
-            Public Theater son referencia de identidad visual audaz con raíces tipográficas.
-          </p>
-          <p class="meta">
-            <a href="https://www.pentagram.com/about/partners/paula-scher" target="_blank" rel="noopener">Pentagram →</a>
-          </p>
+          <h2>Identidad visual</h2>
+          <p><strong>Paula Scher</strong> — su trabajo en Pentagram es referencia de identidad visual audaz con raíces tipográficas.</p>
+          <p class="meta"><a href="https://www.pentagram.com/about/partners/paula-scher" target="_blank" rel="noopener">Pentagram →</a></p>
         </article>
-
       </div>
     </section>
 
-    <!-- ===== OBRA ===== -->
-    <section aria-labelledby="titulo-obra" style="margin-top:3rem;">
-      <h2 id="titulo-obra">Imagen de referencia — obra propia / Wikimedia</h2>
-
+    <!-- OBRA / IMAGEN -->
+    <section class="seccion" aria-labelledby="titulo-obra">
+      <h2 id="titulo-obra">Referencia visual — obra de interés</h2>
       <figure>
         <!--
-          Imagen: composición tipográfica de ejemplo
+          Imagen: Catálogo Bauhaus-Ausstellung Weimar 1923
           Fuente: Wikimedia Commons
-          Autor: Rama — https://commons.wikimedia.org/wiki/User:Rama
-          Licencia: CC BY-SA 2.0 FR — https://creativecommons.org/licenses/by-sa/2.0/fr/deed.es
+          Autor: dominio público (obra de 1923)
           URL: https://commons.wikimedia.org/wiki/File:Bauhaus-Ausstellung_Weimar_1923_Katalog.jpg
         -->
         <img
           class="obra-img"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bauhaus-Ausstellung_Weimar_1923_Katalog.jpg/640px-Bauhaus-Ausstellung_Weimar_1923_Katalog.jpg"
           alt="Catálogo de la Bauhaus-Ausstellung, Weimar 1923 — referencia de diseño tipográfico histórico"
-          width="640"
-          height="480"
+          width="640" height="480"
           loading="lazy"
         />
         <figcaption>
           «Bauhaus-Ausstellung Weimar 1923 — Katalog» ·
-          Autor: <a href="https://commons.wikimedia.org/wiki/User:Rama" target="_blank" rel="noopener">Rama</a> ·
-          Licencia: <a href="https://creativecommons.org/licenses/by-sa/2.0/fr/deed.es" target="_blank" rel="noopener">CC BY-SA 2.0 FR</a> ·
-          Vía <a href="https://commons.wikimedia.org/wiki/File:Bauhaus-Ausstellung_Weimar_1923_Katalog.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>
+          Dominio público · Vía
+          <a href="https://commons.wikimedia.org/wiki/File:Bauhaus-Ausstellung_Weimar_1923_Katalog.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>
         </figcaption>
       </figure>
     </section>
 
-    <!-- ===== ANÁLISIS ===== -->
-    <section aria-labelledby="titulo-analisis" style="margin-top:3rem; background:#fff; padding:2rem; border:1px solid var(--color-gris-claro);">
+    <!-- ANÁLISIS -->
+    <section class="seccion-analisis" aria-labelledby="titulo-analisis">
       <h2 id="titulo-analisis">Preguntas de análisis</h2>
 
-      <h2 style="margin-top:1.5rem; border:none; font-size:0.8rem; color:var(--color-texto); text-transform:none; letter-spacing:0; font-weight:600;">
-        1. ¿Se trata de una GUI? ¿De qué tipo?
-      </h2>
+      <p class="pregunta">1. ¿Se trata de una GUI? ¿De qué tipo?</p>
       <p>
         Sí, este sitio web es una <strong>GUI (Graphical User Interface)</strong> — interfaz gráfica de usuario.
-        Se trata de una GUI de tipo <strong>web browser-based</strong>: el usuario interactúa con ella
-        a través de un navegador web, usando elementos visuales como texto, imágenes, hipervínculos y
-        estructura jerárquica de contenidos. A diferencia de interfaces de escritorio nativas,
-        esta GUI es declarativa (escrita en HTML/CSS) y se despliega en un entorno multiplataforma.
-        No requiere instalación; la interacción principal es la navegación mediante clics en enlaces.
+        Es de tipo <strong>web browser-based</strong>: el usuario interactúa con ella desde un navegador,
+        usando elementos visuales como texto, imágenes e hipervínculos. A diferencia de interfaces de escritorio
+        nativas, esta GUI es declarativa (HTML/CSS), multiplataforma y no requiere instalación. La interacción
+        principal es la navegación mediante clics en enlaces y desplazamiento vertical.
       </p>
 
-      <h2 style="margin-top:1.5rem; border:none; font-size:0.8rem; color:var(--color-texto); text-transform:none; letter-spacing:0; font-weight:600;">
-        2. ¿Qué permite y qué no permite la licencia elegida?
-      </h2>
+      <p class="pregunta">2. ¿Qué permite y qué no permite la licencia CC BY-NC 4.0?</p>
       <p>
-        Este sitio está publicado bajo <strong>Creative Commons BY-NC 4.0</strong>
-        (Atribución – No Comercial). La licencia <strong>permite</strong>: copiar, redistribuir
-        y adaptar el material en cualquier medio o formato, siempre que se dé crédito a la autora
-        y se indique si se realizaron cambios. La licencia <strong>no permite</strong>: utilizar
-        el material con fines comerciales, ni imponer restricciones legales adicionales a terceros.
-        Es decir, cualquier persona puede compartir o remezclar este contenido de manera no lucrativa,
-        pero no puede monetizarlo sin autorización expresa de la autora.
+        Este sitio está publicado bajo <strong>Creative Commons BY-NC 4.0</strong> (Atribución – No Comercial).
+        <strong>Permite:</strong> copiar, redistribuir y adaptar el material en cualquier medio, siempre
+        que se dé crédito a la autora y se indique si hubo cambios.
+        <strong>No permite:</strong> usar el material con fines comerciales ni imponer restricciones legales
+        adicionales a terceros. En resumen: se puede compartir y remezclar libremente de forma no lucrativa,
+        pero no monetizar sin autorización expresa de la autora.
       </p>
     </section>
 
-    <!-- ===== LICENCIA EMBEBIDA ===== -->
-    <div class="licencia" role="contentinfo" aria-label="Licencia">
+    <!-- LICENCIA EMBEBIDA -->
+    <div class="licencia" role="contentinfo" aria-label="Información de licencia">
       <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/deed.es" target="_blank" rel="noopener">
         <img alt="Licencia Creative Commons BY-NC 4.0"
              src="https://licensebuttons.net/l/by-nc/4.0/88x31.png"
              width="88" height="31"
              style="margin-bottom:0.5rem; display:block;" />
       </a>
-      <p style="max-width:none;">
+      <p>
         Esta obra de <strong>Vae</strong> está licenciada bajo
         <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/deed.es" target="_blank" rel="noopener">
           Creative Commons Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0)
-        </a>.<br />
+        </a>.
         Podés compartir y adaptar este contenido siempre que des crédito y no lo uses con fines comerciales.
       </p>
     </div>
 
   </main>
 
-  <!-- ===== PIE ===== -->
   <footer>
     <p>Vae · Diseño Gráfico Córdoba · 2026 ·
       <a href="media.html">→ Ver página audiovisual</a>
