@@ -1,139 +1,314 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milagros G. Gómez | Diseño Gráfico & Comunicación</title>
-    <!-- Google Fonts: Inter para un look moderno y limpio, y Montserrat para títulos grandes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Vae — Diseñadora gráfica cordobesa especializada en comunicación efectiva y versátil." />
+  <meta name="author" content="Vae" />
+
+  <title>Vae · Portfolio Diseño Gráfico 2026</title>
+
+  <!-- CSS externo compartido -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts: Playfair Display + DM Sans (también cargadas en el CSS via @import como respaldo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!--
+    =====================================================
+    LICENCIA DE DERECHOS DE AUTOR
+    Esta obra está licenciada bajo Creative Commons
+    Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0).
+    Podés compartir y adaptar el material siempre que
+    des crédito a la autora y no lo uses con fines comerciales.
+    https://creativecommons.org/licenses/by-nc/4.0/deed.es
+    =====================================================
+  -->
 </head>
-<body class="portfolio-page">
 
-    <header>
-        <div class="main-title-container">
-            <h1 class="main-title">portfolio</h1>
-            <h2 class="sub-title">Diseño <span class="accent">gráfico</span></h2>
-        </div>
-        <nav>
-            <a href="multimedia.html" class="nav-link">Ver Sección Multimedia →</a>
-        </nav>
-    </header>
+<body>
 
-    <main class="grid-container">
-        <!-- Columna Izquierda -->
-        <div class="left-col">
-            <section class="about-me">
-                <!-- Reemplazar con URL de imagen propia u optimizada -->
-                <figure class="profile-figure">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Placeholder_view.svg/600px-Placeholder_view.svg.png" alt="Retrato de la diseñadora trabajando" class="profile-img">
-                </figure>
-                
-                <p class="profile-description">
-                    Hola, soy Milagros Guadalupe Gómez, una estudiante de Licenciatura en Diseño apasionada por la intersección entre la identidad visual y los sistemas de comunicación sustentable. Mi enfoque se centra en crear soluciones claras que actúen como modeladores culturales responsables.
-                </p>
-                
-                <!-- Píldoras/Tags estilo imagen_0.png -->
-                <div class="tags-container">
-                    <span class="tag">Web & Apps</span>
-                    <span class="tag">Identidad</span>
-                    <span class="tag">Sustentabilidad</span>
-                    <span class="tag">Editorial</span>
-                    <span class="tag">Tipografía</span>
-                    <span class="tag">Branding</span>
-                </div>
-            </section>
-        </div>
+  <!-- ===== ENCABEZADO Y NAVEGACIÓN ===== -->
+  <header>
+    <span style="font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase;">
+      Vee · Diseño Gráfico
+    </span>
+    <nav aria-label="Navegación principal">
+      <a href="index.html" class="nav-link activo">Perfil</a>
+      <a href="media.html" class="nav-link">Audiovisual</a>
+    </nav>
+  </header>
 
-        <!-- Columna Derecha -->
-        <div class="right-col">
-            <section class="education">
-                <h2>Formación</h2>
-                
-                <div class="entry">
-                    <div class="date-col">2026 - Actualidad</div>
-                    <div class="info-col">
-                        <h3>Licenciatura en Diseño</h3>
-                        <p>Universidad Provincial de Córdoba</p>
-                    </div>
-                </div>
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main>
 
-                <div class="entry">
-                    <div class="date-col">2026</div>
-                    <div class="info-col">
-                        <h3>Investigación: Metodologías Sostenibles</h3>
-                        <p>Taller de Experimentación Tipográfica</p>
-                    </div>
-                </div>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="titulo-principal">
+      <h1 id="titulo-principal">
+        <span class="anio">2026</span>
+        port<em>f</em>olio
+      </h1>
+      <p class="hero-subtitulo">Diseño <em>gráfico</em></p>
+    </section>
 
-                <div class="entry">
-                    <div class="date-col">2025</div>
-                    <div class="info-col">
-                        <h3>Técnica Superior en Diseño Gráfico</h3>
-                        <p>La Metro, Escuela de Diseño</p>
-                    </div>
-                </div>
-            </section>
+    <!-- GRILLA PRINCIPAL: foto + formación + experiencia -->
+    <section class="grid-perfil" aria-label="Perfil profesional">
 
-            <section class="referents">
-                <h2>Referentes</h2>
-                
-                <div class="entry">
-                    <div class="date-col">Estilo</div>
-                    <div class="info-col">
-                        <h3>Diseño Olímpico Clásico</h3>
-                        <p>Por su capacidad de síntesis visual y claridad.</p>
-                    </div>
-                </div>
+      <!-- COLUMNA 1: Foto y sobre mí -->
+      <div>
+        <figure class="figura-foto">
+          <!--
+            Imagen: autorretrato de la diseñadora
+            Fuente: Wikimedia Commons
+            Autor: Rawpixel Ltd — https://www.rawpixel.com
+            Licencia: CC BY 2.0 — https://creativecommons.org/licenses/by/2.0/
+            URL original: https://commons.wikimedia.org/wiki/File:Woman_photographer_(Unsplash).jpg
+          -->
+          <img
+            class="foto-perfil"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Gatto_europeo4.jpg/320px-Gatto_europeo4.jpg"
+            alt="Fotógrafa con cámara — imagen representativa de perfil"
+            width="400"
+            height="300"
+            loading="lazy"
+          />
+          <figcaption>
+            Foto: <a href="https://commons.wikimedia.org/wiki/File:Woman_photographer_(Unsplash).jpg" target="_blank" rel="noopener">Rawpixel Ltd</a>, CC BY 2.0, vía Wikimedia Commons
+          </figcaption>
+        </figure>
 
-                <div class="entry">
-                    <div class="date-col">Filosofía</div>
-                    <div class="info-col">
-                        <h3>Cradle to Cradle (C2C)</h3>
-                        <p>Procesos de producción gráfica sostenibles.</p>
-                    </div>
-                </div>
-                
-                <!-- Imagen optimizada de Wikimedia Commons (Ejemplo Bauhaus) -->
-                <figure class="referent-figure">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Bauhaus_Weimar_Ausstellung_1923_Plakat.jpg/435px-Bauhaus_Weimar_Ausstellung_1923_Plakat.jpg" alt="Afiche de la Bauhaus por Joost Schmidt" class="referent-img">
-                    <figcaption>Afiche de la Bauhaus (1923). Imagen: Wikimedia Commons.</figcaption>
-                </figure>
-            </section>
-            
-            <section class="software">
-                <h2>Software Skills</h2>
-                <!-- Íconos de software como texto o imágenes (como en image_0.png) -->
-                <div class="software-skills">
-                    <span class="sw-icon">Ps</span>
-                    <span class="sw-icon">Ai</span>
-                    <span class="sw-icon">Ae</span>
-                    <span class="sw-icon">Id</span>
-                    <span class="sw-icon">Pr</span>
-                    <span class="sw-icon accent-text">Canva</span>
-                </div>
-            </section>
-        </div>
-    </main>
+        <h2>Sobre mí</h2>
 
-    <footer class="social-footer">
-        <h2>Contacto y Redes</h2>
-        <p>Seguí mi proceso académico en estos enlaces:</p>
-        <ul class="social-links-list">
-            <li><a href="https://github.com/" target="_blank" class="nav-link">Mi GitHub</a></li>
-            <li><a href="https://www.linkedin.com/" target="_blank" class="nav-link">LinkedIn</a></li>
-        </ul>
-        
-        <!-- Licencia de derechos de autor distinta de copyright (CC BY-NC-SA 4.0) -->
-        <p class="license">
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
-                <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
-            </a><br />
-            Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Licencia Creative Commons CC BY-NC-SA 4.0</a>.
+        <p class="intro">
+          Me dicen Vae y soy diseñadora gráfica cordobesa. Me destaco por mi capacidad de comunicación
+          efectiva y versátil, adaptada a distintos rubros, simple y con el objetivo de lograr
+          el mejor resultado para cada proyecto.
         </p>
-    </footer>
+
+        <div class="tags" aria-label="Áreas de trabajo">
+          <span class="tag">Web &amp; Apps</span>
+          <span class="tag">Editorial</span>
+          <span class="tag">Identidad</span>
+          <span class="tag">Publicitario</span>
+          <span class="tag">Infografía</span>
+          <span class="tag">Promocional</span>
+          <span class="tag">Packaging</span>
+          <span class="tag">Social Media</span>
+          <span class="tag">Señalética</span>
+          <span class="tag">Videos</span>
+          <span class="tag">Volumétricos</span>
+        </div>
+
+        <h2>Redes &amp; Blog</h2>
+        <p>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener me">Instagram</a> ·
+          <a href="https://www.behance.net/" target="_blank" rel="noopener me">Behance</a> ·
+          <a href="https://laboratoriodigital2026.blogspot.com/" target="_blank" rel="noopener me">Blog de la materia</a>
+        </p>
+      </div>
+
+      <!-- COLUMNA 2: Formación -->
+      <div>
+        <h2>Educación</h2>
+        <ul class="lista-items" aria-label="Trayectoria de formación">
+          <li>
+            <span class="item-anio">2025 · Actualidad</span>
+            <span class="item-titulo">Licenciatura en Diseño</span>
+            <span class="item-lugar">Universidad Provincial de Córdoba</span>
+          </li>
+          <li>
+            <span class="item-anio">2026</span>
+            <span class="item-titulo">Curso de Letterpress</span>
+            <span class="item-lugar">Tintanegra</span>
+          </li>
+          <li>
+            <span class="item-anio">2025</span>
+            <span class="item-titulo">Técnica Superior en Diseño Gráfico</span>
+            <span class="item-lugar">La Metro, Escuela de Diseño y Comunicación Audiovisual</span>
+          </li>
+          <li>
+            <span class="item-anio">2024</span>
+            <span class="item-titulo">Certificación en Fotografía</span>
+            <span class="item-lugar">La Metro, Escuela de Diseño y Comunicación Audiovisual</span>
+          </li>
+        </ul>
+
+        <h2 style="margin-top:2rem;">Software &amp; Herramientas</h2>
+        <div class="tags">
+          <span class="tag">Photoshop</span>
+          <span class="tag">Illustrator</span>
+          <span class="tag">After Effects</span>
+          <span class="tag">InDesign</span>
+          <span class="tag">Premiere</span>
+          <span class="tag">Canva</span>
+        </div>
+      </div>
+
+      <!-- COLUMNA 3: Experiencia -->
+      <div>
+        <h2>Experiencia</h2>
+        <ul class="lista-items" aria-label="Experiencia profesional">
+          <li>
+            <span class="item-anio">2025 · Actualidad</span>
+            <span class="item-titulo">Conci Carpinella</span>
+            <span class="item-lugar">+ Social media<br>+ Edición de contenido audiovisual</span>
+          </li>
+          <li>
+            <span class="item-anio">2024</span>
+            <span class="item-titulo">Espacio Taito</span>
+            <span class="item-lugar">+ Social media</span>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ===== REFERENTES ===== -->
+    <section aria-labelledby="titulo-referentes">
+      <h2 id="titulo-referentes">Referentes e intereses</h2>
+
+      <p>
+        Mi práctica está influenciada por diseñadores y artistas que combinan
+        rigor tipográfico con sensibilidad visual. Estas son algunas de las referencias
+        que guían mi mirada.
+      </p>
+
+      <div class="grid-referentes">
+
+        <article class="card-referente">
+          <h2>Tipografía editorial</h2>
+          <p>
+            <strong>Herb Lubalin</strong> — maestro de la tipografía expresiva. Su trabajo
+            en <em>U&lc</em> y el logotipo de <em>Families</em> son un ejemplo permanente
+            de cómo la letra puede ser imagen.
+          </p>
+          <p class="meta">
+            <a href="https://www.lubalininstitute.com/" target="_blank" rel="noopener">Lubalin Institute →</a>
+          </p>
+        </article>
+
+        <article class="card-referente">
+          <h2>Diseño gráfico latinoamericano</h2>
+          <p>
+            <strong>Alejandro Magallanes</strong> — diseñador mexicano conocido por su trabajo
+            en carteles culturales con irónía, humor y profundidad conceptual.
+          </p>
+          <p class="meta">
+            <a href="https://es.wikipedia.org/wiki/Alejandro_Magallanes" target="_blank" rel="noopener">Wikipedia →</a>
+          </p>
+        </article>
+
+        <article class="card-referente">
+          <h2>Fotografía y comunicación</h2>
+          <p>
+            <strong>Diane Arbus</strong> — su mirada directa e íntima sobre sujetos marginados
+            influyó mi acercamiento a la fotografía como herramienta de comunicación genuina.
+          </p>
+          <p class="meta">
+            <a href="https://es.wikipedia.org/wiki/Diane_Arbus" target="_blank" rel="noopener">Wikipedia →</a>
+          </p>
+        </article>
+
+        <article class="card-referente">
+          <h2>Diseño de identidad</h2>
+          <p>
+            <strong>Paula Scher</strong> — su trabajo en Pentagram y el rediseño del logo del
+            Public Theater son referencia de identidad visual audaz con raíces tipográficas.
+          </p>
+          <p class="meta">
+            <a href="https://www.pentagram.com/about/partners/paula-scher" target="_blank" rel="noopener">Pentagram →</a>
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== OBRA ===== -->
+    <section aria-labelledby="titulo-obra" style="margin-top:3rem;">
+      <h2 id="titulo-obra">Imagen de referencia — obra propia / Wikimedia</h2>
+
+      <figure>
+        <!--
+          Imagen: composición tipográfica de ejemplo
+          Fuente: Wikimedia Commons
+          Autor: Rama — https://commons.wikimedia.org/wiki/User:Rama
+          Licencia: CC BY-SA 2.0 FR — https://creativecommons.org/licenses/by-sa/2.0/fr/deed.es
+          URL: https://commons.wikimedia.org/wiki/File:Bauhaus-Ausstellung_Weimar_1923_Katalog.jpg
+        -->
+        <img
+          class="obra-img"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bauhaus-Ausstellung_Weimar_1923_Katalog.jpg/640px-Bauhaus-Ausstellung_Weimar_1923_Katalog.jpg"
+          alt="Catálogo de la Bauhaus-Ausstellung, Weimar 1923 — referencia de diseño tipográfico histórico"
+          width="640"
+          height="480"
+          loading="lazy"
+        />
+        <figcaption>
+          «Bauhaus-Ausstellung Weimar 1923 — Katalog» ·
+          Autor: <a href="https://commons.wikimedia.org/wiki/User:Rama" target="_blank" rel="noopener">Rama</a> ·
+          Licencia: <a href="https://creativecommons.org/licenses/by-sa/2.0/fr/deed.es" target="_blank" rel="noopener">CC BY-SA 2.0 FR</a> ·
+          Vía <a href="https://commons.wikimedia.org/wiki/File:Bauhaus-Ausstellung_Weimar_1923_Katalog.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== ANÁLISIS ===== -->
+    <section aria-labelledby="titulo-analisis" style="margin-top:3rem; background:#fff; padding:2rem; border:1px solid var(--color-gris-claro);">
+      <h2 id="titulo-analisis">Preguntas de análisis</h2>
+
+      <h2 style="margin-top:1.5rem; border:none; font-size:0.8rem; color:var(--color-texto); text-transform:none; letter-spacing:0; font-weight:600;">
+        1. ¿Se trata de una GUI? ¿De qué tipo?
+      </h2>
+      <p>
+        Sí, este sitio web es una <strong>GUI (Graphical User Interface)</strong> — interfaz gráfica de usuario.
+        Se trata de una GUI de tipo <strong>web browser-based</strong>: el usuario interactúa con ella
+        a través de un navegador web, usando elementos visuales como texto, imágenes, hipervínculos y
+        estructura jerárquica de contenidos. A diferencia de interfaces de escritorio nativas,
+        esta GUI es declarativa (escrita en HTML/CSS) y se despliega en un entorno multiplataforma.
+        No requiere instalación; la interacción principal es la navegación mediante clics en enlaces.
+      </p>
+
+      <h2 style="margin-top:1.5rem; border:none; font-size:0.8rem; color:var(--color-texto); text-transform:none; letter-spacing:0; font-weight:600;">
+        2. ¿Qué permite y qué no permite la licencia elegida?
+      </h2>
+      <p>
+        Este sitio está publicado bajo <strong>Creative Commons BY-NC 4.0</strong>
+        (Atribución – No Comercial). La licencia <strong>permite</strong>: copiar, redistribuir
+        y adaptar el material en cualquier medio o formato, siempre que se dé crédito a la autora
+        y se indique si se realizaron cambios. La licencia <strong>no permite</strong>: utilizar
+        el material con fines comerciales, ni imponer restricciones legales adicionales a terceros.
+        Es decir, cualquier persona puede compartir o remezclar este contenido de manera no lucrativa,
+        pero no puede monetizarlo sin autorización expresa de la autora.
+      </p>
+    </section>
+
+    <!-- ===== LICENCIA EMBEBIDA ===== -->
+    <div class="licencia" role="contentinfo" aria-label="Licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/deed.es" target="_blank" rel="noopener">
+        <img alt="Licencia Creative Commons BY-NC 4.0"
+             src="https://licensebuttons.net/l/by-nc/4.0/88x31.png"
+             width="88" height="31"
+             style="margin-bottom:0.5rem; display:block;" />
+      </a>
+      <p style="max-width:none;">
+        Esta obra de <strong>Vae</strong> está licenciada bajo
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/deed.es" target="_blank" rel="noopener">
+          Creative Commons Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0)
+        </a>.<br />
+        Podés compartir y adaptar este contenido siempre que des crédito y no lo uses con fines comerciales.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- ===== PIE ===== -->
+  <footer>
+    <p>Vae · Diseño Gráfico Córdoba · 2026 ·
+      <a href="media.html">→ Ver página audiovisual</a>
+    </p>
+  </footer>
 
 </body>
 </html>
