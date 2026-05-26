@@ -5,14 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Preferencias audiovisuales de Vae — música y video que inspiran su práctica de diseño." />
   <meta name="author" content="Vae" />
-  <title>Vee · Audiovisual</title>
+  <title>Vae · Audiovisual</title>
 
-  <!-- Google Fonts: Playfair Display + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
-
-  <!-- CSS externo -->
   <link rel="stylesheet" href="styles.css" />
 
   <!--
@@ -37,166 +34,36 @@
       --fuente-cuerpo: 'DM Sans', Helvetica, sans-serif;
       --max-ancho: 960px;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: var(--color-fondo);
-      color: var(--color-texto);
-      font-family: var(--fuente-cuerpo);
-      font-weight: 300;
-      font-size: 1rem;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    header {
-      border-bottom: 1px solid var(--color-gris-claro);
-      padding: 1.5rem 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--color-blanco);
-    }
-
-    .logo-header {
-      font-family: var(--fuente-cuerpo);
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-texto);
-    }
-
+    body { background: var(--color-fondo); color: var(--color-texto); font-family: var(--fuente-cuerpo); font-weight: 300; font-size: 1rem; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    header { border-bottom: 1px solid var(--color-gris-claro); padding: 1.5rem 3rem; display: flex; align-items: center; justify-content: space-between; background: var(--color-blanco); }
+    .logo-header { font-family: var(--fuente-cuerpo); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-texto); }
     nav { display: flex; gap: 2rem; }
-
-    a {
-      color: var(--color-acento);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
+    a { color: var(--color-acento); text-decoration: none; font-weight: 500; transition: color 0.2s; }
     a:hover { color: var(--color-texto); text-decoration: underline; text-underline-offset: 3px; }
-
-    a.nav-link {
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-gris-medio);
-      font-weight: 400;
-    }
+    a.nav-link { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-gris-medio); font-weight: 400; }
     a.nav-link:hover { color: var(--color-acento); text-decoration: none; }
     a.nav-link.activo { color: var(--color-texto); font-weight: 500; }
-
-    main {
-      max-width: var(--max-ancho);
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
-
-    h1 {
-      font-family: var(--fuente-display);
-      font-size: clamp(3.5rem, 10vw, 7rem);
-      font-weight: 700;
-      line-height: 0.92;
-      letter-spacing: -0.02em;
-      color: var(--color-texto);
-    }
+    main { max-width: var(--max-ancho); margin: 0 auto; padding: 3rem 2rem; }
+    h1 { font-family: var(--fuente-display); font-size: clamp(3.5rem, 10vw, 7rem); font-weight: 700; line-height: 0.92; letter-spacing: -0.02em; color: var(--color-texto); }
     h1 em { font-style: italic; color: var(--color-acento); }
-    h1 .anio {
-      font-family: var(--fuente-cuerpo);
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--color-gris-medio);
-      display: block;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-family: var(--fuente-cuerpo);
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--color-gris-medio);
-      margin-bottom: 0.75rem;
-      padding-bottom: 0.4rem;
-      border-bottom: 1px solid var(--color-gris-claro);
-    }
-
-    p {
-      font-family: var(--fuente-cuerpo);
-      font-size: 0.92rem;
-      line-height: 1.8;
-      color: var(--color-texto);
-      max-width: 60ch;
-      margin-bottom: 1.5rem;
-    }
+    h1 .anio { font-family: var(--fuente-cuerpo); font-size: 0.85rem; font-weight: 500; color: var(--color-gris-medio); display: block; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    h2 { font-family: var(--fuente-cuerpo); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-gris-medio); margin-bottom: 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--color-gris-claro); }
+    p { font-family: var(--fuente-cuerpo); font-size: 0.92rem; line-height: 1.8; color: var(--color-texto); max-width: 60ch; margin-bottom: 1.5rem; }
     p.intro { font-size: 1rem; font-weight: 300; color: #444; max-width: 65ch; }
     p.meta { font-size: 0.75rem; color: var(--color-gris-medio); margin-bottom: 0.25rem; max-width: none; }
-
-    .hero {
-      padding: 3rem 0 5rem;
-      border-bottom: 1px solid var(--color-gris-claro);
-      margin-bottom: 3rem;
-    }
-    .hero-subtitulo {
-      font-family: var(--fuente-display);
-      font-style: italic;
-      font-size: 1.3rem;
-      color: var(--color-gris-medio);
-      margin-top: 0.75rem;
-    }
-
-    .bloque-media {
-      margin-bottom: 5rem;
-      padding-bottom: 3rem;
-      border-bottom: 1px solid var(--color-gris-claro);
-    }
+    .hero { padding: 3rem 0 5rem; border-bottom: 1px solid var(--color-gris-claro); margin-bottom: 3rem; }
+    .hero-subtitulo { font-family: var(--fuente-display); font-style: italic; font-size: 1.3rem; color: var(--color-gris-medio); margin-top: 0.75rem; }
+    .bloque-media { margin-bottom: 5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--color-gris-claro); }
     .bloque-media:last-of-type { border-bottom: none; }
-
-    .embed-contenedor {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      background: #000;
-      margin: 1.5rem 0;
-    }
-    .embed-contenedor iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: none;
-    }
-
-    .licencia {
-      margin-top: 5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--color-gris-claro);
-      font-size: 0.75rem;
-      color: var(--color-gris-medio);
-      line-height: 1.6;
-    }
+    .embed-contenedor { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; margin: 1.5rem 0; }
+    .embed-contenedor iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    .licencia { margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-gris-claro); font-size: 0.75rem; color: var(--color-gris-medio); line-height: 1.6; }
     .licencia p { max-width: none; font-size: 0.75rem; color: var(--color-gris-medio); }
     .licencia a { color: var(--color-gris-medio); font-weight: 400; text-decoration: underline; }
-
-    footer {
-      background: var(--color-texto);
-      color: var(--color-fondo);
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      margin-top: 5rem;
-    }
+    footer { background: var(--color-texto); color: var(--color-fondo); text-align: center; padding: 1.5rem; font-size: 0.75rem; letter-spacing: 0.1em; margin-top: 5rem; }
     footer a { color: var(--color-acento-claro); font-weight: 400; }
-
-    @media (max-width: 700px) {
-      header { flex-direction: column; gap: 1rem; padding: 1.5rem; }
-    }
+    @media (max-width: 700px) { header { flex-direction: column; gap: 1rem; padding: 1.5rem; } }
   </style>
 </head>
 
@@ -212,7 +79,6 @@
 
   <main>
 
-    <!-- HERO -->
     <section class="hero" aria-labelledby="titulo-media">
       <h1 id="titulo-media">
         <span class="anio">Escuchar · Ver</span>
@@ -221,43 +87,68 @@
       <p class="hero-subtitulo">Lo que suena y se ve <em>mientras diseño</em></p>
     </section>
 
-    <p class="intro">
-      La música y el video son parte de mi proceso creativo. Estas son algunas obras
-      audiovisuales que me acompañan, inspiran mi paleta visual y me conectan con el
-      ritmo del trabajo de diseño.
-    </p>
-
-    <!-- VIDEO 1 -->
-    <section class="bloque-media" aria-labelledby="titulo-video1">
-      <h2 id="titulo-video1">Video — diseño en movimiento</h2>
+    <!-- VIDEO: Videofolio propio -->
+    <section class="bloque-media" aria-labelledby="titulo-video">
+      <h2 id="titulo-video">Videofolio — trabajos de diseño</h2>
       <p>
-        <strong>Videofolio - veedg</strong> 
+        Una selección de mis trabajos de diseño gráfico reunidos en formato audiovisual.
+        Identidad, editorial, social media y más.
       </p>
-      <div class="embed-contenedor" role="region" aria-label="Video embebido de YouTube">
+      <div class="embed-contenedor" role="region" aria-label="Videofolio embebido de YouTube">
         <!--
-          Video: "Bauhaus: Art as Life" — trailer
-          Canal: Barbican Centre — https://www.youtube.com/@barbican
+          Video: Videofolio de Gomez Milagros
+          Autora: Gomez Milagros
+          Canal propio en YouTube
           Embebido bajo Términos de Servicio de YouTube.
-          Todos los derechos reservados al titular.
         -->
         <iframe
-          src="https://www.youtube.com/embed/V3vhNAqNnFU"
-          title="Bauhaus: Art as Life — Barbican Centre (documental)"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          src="https://www.youtube.com/embed/QIb-pjrtUkY?si=iJS72pZf2NCUq7yR"
+          title="Videofolio — Gomez Milagros"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
           loading="lazy"
         ></iframe>
       </div>
       <p class="meta">
-        «Bauhaus: Art as Life» · Canal:
-        <a href="https://www.youtube.com/@barbican" target="_blank" rel="noopener">Barbican Centre</a>
-        en YouTube · Todos los derechos reservados al titular.
+        Videofolio · Autora: Gomez Milagros · Canal propio en YouTube.
       </p>
     </section>
 
+    <!-- MÚSICA: Playlist Spotify -->
+    <section class="bloque-media" aria-labelledby="titulo-musica">
+      <h2 id="titulo-musica">Música — playlist de estudio</h2>
+      <p>
+        La música que me acompaña mientras diseño. Una selección personal
+        que marca el ritmo y el estado de ánimo de cada proyecto.
+      </p>
+      <!--
+        Playlist embebida: Spotify
+        Selección: Gomez Milagros
+        Embebida bajo Términos de Servicio de Spotify.
+        Los derechos de cada canción pertenecen a sus respectivos artistas y sellos.
+      -->
+      <iframe
+        data-testid="embed-iframe"
+        style="border-radius:12px; margin: 1.5rem 0; display:block;"
+        src="https://open.spotify.com/embed/playlist/0WIQ4qFL9rlVBt6hztjnw1?utm_source=generator"
+        width="100%"
+        height="352"
+        frameBorder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+      <p class="meta">
+        Playlist: selección personal de Gomez Milagros ·
+        <a href="https://open.spotify.com/playlist/0WIQ4qFL9rlVBt6hztjnw1" target="_blank" rel="noopener">Escuchar en Spotify</a>
+        · Derechos de cada canción pertenecen a sus respectivos artistas y sellos.
+      </p>
+    </section>
 
     <!-- LICENCIA -->
-   <div class="licencia" role="contentinfo" aria-label="Información de licencia">
+<div class="licencia" role="contentinfo" aria-label="Información de licencia">
   <a href="https://veeoc.github.io/Parcial_gomezmilagros.github.io/">Portfolio</a> © 2026 by 
   <a href="https://www.instagram.com/tunombredeusuario">Gomez Milagros</a> is licensed under 
   <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a>
