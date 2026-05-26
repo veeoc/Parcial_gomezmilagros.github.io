@@ -1,65 +1,386 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universo Audiovisual | Milagros G. Gómez</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilo.css">
-</head>
-<body class="multimedia-page">
+/* =============================================
+   PORTFOLIO VAE — DISEÑO GRÁFICO 2026
+   Estilos externos compartidos por ambos documentos
+   Autora: Vae | Licencia: CC BY-NC 4.0
+   ============================================= */
 
-    <header>
-        <div class="main-title-container multimedia-title">
-            <h1 class="main-title">audiovisual</h1>
-            <h2 class="sub-title">Mis referencias <span class="accent">sonoras</span></h2>
-        </div>
-        <nav>
-            <a href="index.html" class="nav-link">← Volver al Portfolio</a>
-        </nav>
-    </header>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
 
-    <main class="grid-container">
-        <!-- Columna Izquierda (Texto explicativo) -->
-        <div class="left-col">
-            <section class="about-multimedia">
-                <h2>El Ritmo de mi Diseño</h2>
-                <p>El ritmo, el montaje y la banda sonora son componentes fundamentales que inspiran mis procesos de creación visual, especialmente en proyectos de branding digital y diseño de interfaces. Mi flujo de trabajo se potencia con bandas sonoras que permiten la concentración.</p>
-                
-                <p class="tags-container">
-                    <span class="tag">Lofi</span>
-                    <span class="tag">Música Electrónica</span>
-                    <span class="tag">Post-Rock</span>
-                    <span class="tag">Música para crear</span>
-                </p>
-            </section>
-        </div>
+/* --- Variables de color y tipografía --- */
+:root {
+  --color-fondo: #f5f5f3;
+  --color-texto: #2b2b2b;
+  --color-acento: #7b6fc4;
+  --color-acento-claro: #a99fd8;
+  --color-gris-medio: #888888;
+  --color-gris-claro: #d8d8d8;
+  --color-blanco: #ffffff;
+  --fuente-display: 'Playfair Display', Georgia, serif;
+  --fuente-cuerpo: 'DM Sans', Helvetica, sans-serif;
+  --max-ancho: 960px;
+  --espacio-s: 0.75rem;
+  --espacio-m: 1.5rem;
+  --espacio-l: 3rem;
+  --espacio-xl: 5rem;
+}
 
-        <!-- Columna Derecha (Video embebido) -->
-        <div class="right-col">
-            <section class="video-section">
-                <h2>Mi Pieza Musical de Referencia</h2>
-                
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                
-                <div class="entry">
-                    <div class="date-col">Autoría</div>
-                    <div class="info-col">
-                        <h3>Lo-Fi Beats para concentración</h3>
-                        <p>Vídeo embebido: Canal oficial de Lofi Girl. Contenido compartido con fines educativos.</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
+/* --- Reset básico --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    <footer class="social-footer">
-        <p class="license">© 2026 - Portfolio Profesional. Navegación bidireccional activa.</p>
-    </footer>
+/* --- Base --- */
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-cuerpo);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
 
-</body>
-</html>
+/* --- Encabezado principal del sitio --- */
+header {
+  border-bottom: 1px solid var(--color-gris-claro);
+  padding: var(--espacio-m) var(--espacio-l);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-blanco);
+}
+
+/* --- Navegación --- */
+nav {
+  display: flex;
+  gap: var(--espacio-m);
+}
+
+/* --- Títulos h1 --- */
+h1 {
+  font-family: var(--fuente-display);
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--color-texto);
+}
+
+/* Parte en itálica del h1 (span interno) */
+h1 em {
+  font-style: italic;
+  color: var(--color-acento);
+}
+
+/* Año superpuesto en h1 */
+h1 .anio {
+  font-family: var(--fuente-cuerpo);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-gris-medio);
+  display: block;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+/* --- Subtítulos h2 --- */
+h2 {
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gris-medio);
+  margin-bottom: var(--espacio-s);
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--color-gris-claro);
+}
+
+/* --- Párrafos --- */
+p {
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--color-texto);
+  max-width: 60ch;          /* ancho óptimo para lectura en pantalla */
+  margin-bottom: var(--espacio-m);
+}
+
+/* --- Párrafo de introducción grande --- */
+p.intro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: 300;
+  color: #444;
+}
+
+/* --- Párrafo pequeño / meta --- */
+p.meta {
+  font-size: 0.78rem;
+  color: var(--color-gris-medio);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.25rem;
+}
+
+/* --- Enlaces a --- */
+a {
+  color: var(--color-acento);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-texto);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-acento);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* --- Enlace de navegación entre páginas --- */
+a.nav-link {
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gris-medio);
+  font-weight: 400;
+  border-bottom: 1px solid transparent;
+}
+
+a.nav-link:hover {
+  color: var(--color-acento);
+  text-decoration: none;
+  border-bottom-color: var(--color-acento);
+}
+
+a.nav-link.activo {
+  color: var(--color-texto);
+  font-weight: 500;
+}
+
+/* --- Contenedor principal --- */
+main {
+  max-width: var(--max-ancho);
+  margin: 0 auto;
+  padding: var(--espacio-l) var(--espacio-m);
+}
+
+/* --- Hero / portada --- */
+.hero {
+  padding: var(--espacio-l) 0 var(--espacio-xl);
+  border-bottom: 1px solid var(--color-gris-claro);
+  margin-bottom: var(--espacio-l);
+  position: relative;
+}
+
+.hero-subtitulo {
+  font-family: var(--fuente-display);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--color-gris-medio);
+  margin-top: var(--espacio-s);
+}
+
+/* --- Grid de secciones (sobre mí + formación + experiencia) --- */
+.grid-perfil {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--espacio-l);
+  margin-bottom: var(--espacio-l);
+}
+
+@media (max-width: 700px) {
+  .grid-perfil {
+    grid-template-columns: 1fr;
+  }
+  header {
+    flex-direction: column;
+    gap: var(--espacio-s);
+    align-items: flex-start;
+  }
+}
+
+/* --- Foto de perfil --- */
+.foto-perfil {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+}
+
+.foto-perfil:hover {
+  filter: grayscale(30%);
+}
+
+.figura-foto {
+  margin-bottom: var(--espacio-m);
+}
+
+figcaption {
+  font-size: 0.72rem;
+  color: var(--color-gris-medio);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+
+/* --- Lista de ítems de formación/experiencia --- */
+.lista-items {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-items li {
+  padding: var(--espacio-s) 0;
+  border-bottom: 1px solid var(--color-gris-claro);
+}
+
+.lista-items li:last-child {
+  border-bottom: none;
+}
+
+.item-anio {
+  font-size: 0.7rem;
+  color: var(--color-acento-claro);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.item-titulo {
+  font-weight: 500;
+  font-size: 0.88rem;
+  display: block;
+  color: var(--color-texto);
+}
+
+.item-lugar {
+  font-size: 0.8rem;
+  color: var(--color-gris-medio);
+  display: block;
+}
+
+/* --- Tags de habilidades --- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: var(--espacio-m) 0;
+}
+
+.tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--color-gris-claro);
+  border-radius: 999px;
+  color: var(--color-gris-medio);
+  background: var(--color-blanco);
+}
+
+/* --- Sección referentes --- */
+.grid-referentes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--espacio-m);
+  margin-top: var(--espacio-m);
+}
+
+.card-referente {
+  background: var(--color-blanco);
+  padding: var(--espacio-m);
+  border: 1px solid var(--color-gris-claro);
+}
+
+.card-referente h2 {
+  border: none;
+  font-size: 0.65rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-referente p {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+  max-width: none;
+}
+
+/* --- Imagen de obra --- */
+.obra-img {
+  width: 100%;
+  display: block;
+  margin-bottom: var(--espacio-m);
+  border: 1px solid var(--color-gris-claro);
+}
+
+/* --- Licencia --- */
+.licencia {
+  margin-top: var(--espacio-xl);
+  padding-top: var(--espacio-m);
+  border-top: 1px solid var(--color-gris-claro);
+  font-size: 0.78rem;
+  color: var(--color-gris-medio);
+  line-height: 1.6;
+}
+
+.licencia a {
+  color: var(--color-gris-medio);
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* --- Footer --- */
+footer {
+  background: var(--color-texto);
+  color: var(--color-fondo);
+  text-align: center;
+  padding: var(--espacio-m);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  margin-top: var(--espacio-xl);
+}
+
+footer a {
+  color: var(--color-acento-claro);
+}
+
+/* ============ PÁGINA 2: MEDIA ============ */
+
+.embed-contenedor {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  margin: var(--espacio-m) 0;
+}
+
+.embed-contenedor iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+.bloque-media {
+  margin-bottom: var(--espacio-xl);
+  padding-bottom: var(--espacio-l);
+  border-bottom: 1px solid var(--color-gris-claro);
+}
+
+.bloque-media:last-of-type {
+  border-bottom: none;
+}
