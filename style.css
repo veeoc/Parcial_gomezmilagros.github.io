@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo Audiovisual | Milagros G. Gómez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="multimedia-page">
+
+    <header>
+        <div class="main-title-container multimedia-title">
+            <h1 class="main-title">audiovisual</h1>
+            <h2 class="sub-title">Mis referencias <span class="accent">sonoras</span></h2>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link">← Volver al Portfolio</a>
+        </nav>
+    </header>
+
+    <main class="grid-container">
+        <!-- Columna Izquierda (Texto explicativo) -->
+        <div class="left-col">
+            <section class="about-multimedia">
+                <h2>El Ritmo de mi Diseño</h2>
+                <p>El ritmo, el montaje y la banda sonora son componentes fundamentales que inspiran mis procesos de creación visual, especialmente en proyectos de branding digital y diseño de interfaces. Mi flujo de trabajo se potencia con bandas sonoras que permiten la concentración.</p>
+                
+                <p class="tags-container">
+                    <span class="tag">Lofi</span>
+                    <span class="tag">Música Electrónica</span>
+                    <span class="tag">Post-Rock</span>
+                    <span class="tag">Música para crear</span>
+                </p>
+            </section>
+        </div>
+
+        <!-- Columna Derecha (Video embebido) -->
+        <div class="right-col">
+            <section class="video-section">
+                <h2>Mi Pieza Musical de Referencia</h2>
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                
+                <div class="entry">
+                    <div class="date-col">Autoría</div>
+                    <div class="info-col">
+                        <h3>Lo-Fi Beats para concentración</h3>
+                        <p>Vídeo embebido: Canal oficial de Lofi Girl. Contenido compartido con fines educativos.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="social-footer">
+        <p class="license">© 2026 - Portfolio Profesional. Navegación bidireccional activa.</p>
+    </footer>
+
+</body>
+</html>
